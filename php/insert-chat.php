@@ -5,6 +5,7 @@
 		$outgoing_id = mysqli_real_escape_string($conn, $POST['outgoing_id']);
 		$incoming_id = mysqli_real_escape_string($conn, $POST['incoming_id']);
 		$message = mysqli_real_escape_string($conn, $POST['message']);
+		date_default_timezone_set('America/Sao_Paulo');
 		$dataagora = date("Y-m-d H:i:s");
 
 		if(!empty($message)){
