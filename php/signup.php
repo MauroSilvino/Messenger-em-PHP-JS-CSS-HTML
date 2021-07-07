@@ -32,6 +32,7 @@
 						if(move_uploaded_file($tmp_name, "images/".$new_img_name)){
 							$status = "Ativo";
 							$random_id = rand(time(), 10000000);
+							date_default_timezone_set('America/Sao_Paulo');
 							$dataagora = date("Y-m-d H:i:s");
 
 							$sql2 = mysqli_query($conn, "INSERT INTO users (unique_id, fname, iname, email, password, img, status, reg_time) VALUES ({$random_id}, '{$nome}', '{$ultimo_nome}', '{$email}', '{$senha}', '{$new_img_name}', '{$status}', '{$dataagora}'");
